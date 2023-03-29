@@ -2737,6 +2737,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extinguishForce: 1
+  Hose: {fileID: 1772741183}
+--- !u!198 &1772741183 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9127386452867442698, guid: d46de585262696e478f130bdf5e4be49,
+    type: 3}
+  m_PrefabInstance: {fileID: 192861965162221720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1822402379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,6 +3131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaterHose
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966606169875807202, guid: d46de585262696e478f130bdf5e4be49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8969559999032655918, guid: d46de585262696e478f130bdf5e4be49,
         type: 3}
