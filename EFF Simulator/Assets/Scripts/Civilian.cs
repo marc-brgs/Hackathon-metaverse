@@ -19,5 +19,7 @@ public class Civilian : MonoBehaviour
     public void Rescue()
     {
         this.gameObject.SetActive(false);
+        
+        GameManager.instance.UpdateUI();
     }
 }

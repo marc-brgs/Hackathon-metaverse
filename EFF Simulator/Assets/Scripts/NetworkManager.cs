@@ -16,6 +16,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     #region Public Variables
         
+    [SerializeField] private PhotonView photonView;
+    
     #endregion
 
     #region Private Fields
@@ -47,6 +49,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     /// </summary>
     void Start()
     {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+        
         Connect();
     }
 
