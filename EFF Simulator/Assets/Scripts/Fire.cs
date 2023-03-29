@@ -21,7 +21,6 @@ public class Fire : MonoBehaviour
 
     private void Update()
     {
-        ChangeIntensity();
     }
 
     private void ChangeIntensity()
@@ -32,5 +31,13 @@ public class Fire : MonoBehaviour
             emission.rateOverTime = currentIntensity * startIntensities[i];
         }
         
+    }
+
+    public bool TryExtinguish(float amount)
+    {
+        currentIntensity -= amount;
+        ChangeIntensity();
+
+        return currentIntensity <= 0f;
     }
 }
