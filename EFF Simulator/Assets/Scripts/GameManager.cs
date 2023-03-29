@@ -1,13 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+
+    public GameObject playerPrefab;
     [SerializeField] private TextMeshProUGUI civilianCounterText;
     
     private int civilianCounter = 0;
@@ -23,6 +25,8 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        Vector3 position = new Vector3(43f, 0f, 15f);
+        PhotonNetwork.Instantiate(playerPrefab.name, position, Quaternion.identity);
         UpdateUI();
     }
 
