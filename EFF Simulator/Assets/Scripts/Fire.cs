@@ -6,18 +6,31 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     [SerializeField, Range(0, 1f)] private float currentIntensity = 1.0f;
-    private float startIntensity = 5.0f;
-
-    [SerializeField] private ParticleSystem firePS = null;
+    private float [] startIntensities = new float[0];
+    
+    [SerializeField] private ParticleSystem [] particleSystems = new ParticleSystem[0];
 
     private void Start()
     {
-        startIntensity = firePS.emission.rateOverTime.constant;
+        startIntensities = new float[particleSystems.Length];
+        for (int i = 0; i < particleSystems.Length; i++)
+        {
+            startIntensities[i] = particleSystems[i].emission.rateOverTime.constant;
+        }
+    }
+
+    private void Update()
+    {
+        ChangeIntensity();
     }
 
     private void ChangeIntensity()
     {
-        var emission = firePS.emission.rateOverTime;
-        emission.constant = currentIntensity * startIntensity;
+        for (int i = 0; i < particleSystems.Length; i++)
+        {
+            var emission = particleSystems[i].emission;
+            emission.rateOverTime = currentIntensity * startIntensities[i];
+        }
+        
     }
 }
