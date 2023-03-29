@@ -10,6 +10,8 @@ public class Fire : MonoBehaviour
     
     [SerializeField] private ParticleSystem [] particleSystems = new ParticleSystem[0];
 
+    private bool isLit = true;
+    
     private void Start()
     {
         startIntensities = new float[particleSystems.Length];
@@ -19,8 +21,24 @@ public class Fire : MonoBehaviour
         }
     }
 
+    private float timeLastWatered = 0;
+    [SerializeField] private float regenDelay = 2.5f;
+    [SerializeField] private float regenRate = 1.0f;
     private void Update()
     {
+        if (isLit && currentIntensity < 1f)
+        {
+            Regenerate();
+        }
+    }
+
+    private void Regenerate()
+    {
+        if (Time.time - timeLastWatered >= regenDelay)
+        {
+            currentIntensity += regenRate * Time.deltaTime;
+            ChangeIntensity();
+        }
     }
 
     private void ChangeIntensity()
@@ -35,9 +53,16 @@ public class Fire : MonoBehaviour
 
     public bool TryExtinguish(float amount)
     {
+        timeLastWatered = Time.time;
+        
         currentIntensity -= amount;
         ChangeIntensity();
-
-        return currentIntensity <= 0f;
+        
+        if (currentIntensity <= 0f)
+        {
+            isLit = false;
+        }
+        
+        return !isLit; // succeed
     }
 }
