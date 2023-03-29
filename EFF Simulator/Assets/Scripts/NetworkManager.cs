@@ -15,8 +15,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #endregion
 
     #region Public Variables
-        
-    [SerializeField] private PhotonView photonView;
     
     #endregion
 
@@ -49,11 +47,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     /// </summary>
     void Start()
     {
-        if (!photonView.IsMine)
-        {
-            return;
-        }
-        
         Connect();
     }
 
@@ -86,8 +79,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
         //instantiate the player prefab on the network 
         // PhotonNetwork.Instantiate();
-        
-        photonView.RPC("TurnOnLight", RpcTarget.All, "true");
     }
     public override void OnDisconnected(DisconnectCause cause)
     {
@@ -121,12 +112,5 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     #endregion
- 
-    
-    [PunRPC]
-    private void TurnOnLight(bool value)
-    {
-    
-    }
 }
 

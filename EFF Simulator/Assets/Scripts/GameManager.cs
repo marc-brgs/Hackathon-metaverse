@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         
         foreach(GameObject civilian in civilians)
         {
-            if (civilian.active)
+            if (civilian.activeSelf)
             {
                 civilianCounter++;
             }

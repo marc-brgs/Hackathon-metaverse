@@ -780,6 +780,12 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!1 &248852548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7125430789633456783, guid: 2a51a57777108c448826e0e456a885f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1595344955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &322607828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2197,6 +2203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9f27e6801470c489be939816d02bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonView: {fileID: 869845779}
   controller: {fileID: 869845773}
   camera: {fileID: 1548833875}
   speed: 5
@@ -2523,7 +2530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac65e38985b46c41994571dd61035a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 869845779}
 --- !u!1001 &1012595772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3311,6 +3317,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1595344955}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1595344961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248852548}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &1822402379
 GameObject:
   m_ObjectHideFlags: 0
