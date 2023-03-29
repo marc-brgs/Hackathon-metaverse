@@ -103,8 +103,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsConnected)
         {
             // #Critical we need at this point to attempt joining a Random Room. If it fails, we'll get notified in OnJoinRandomFailed() and we'll create one.
-            //PhotonNetwork.JoinRandomRoom();
-            PhotonNetwork.CreateRoom("Test");
+            PhotonNetwork.JoinRandomRoom();
         }
         else
         {
