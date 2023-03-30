@@ -12,6 +12,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     #region Private Serializable Fields
        
+    public GameObject playerPrefab;
+    
     #endregion
 
     #region Public Variables
@@ -78,7 +80,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
         //instantiate the player prefab on the network 
-        // PhotonNetwork.Instantiate();
+        Vector3 position = new Vector3(43f, 0f, 15f);
+        PhotonNetwork.Instantiate(playerPrefab.name, position, Quaternion.identity, 0);
     }
     public override void OnDisconnected(DisconnectCause cause)
     {
