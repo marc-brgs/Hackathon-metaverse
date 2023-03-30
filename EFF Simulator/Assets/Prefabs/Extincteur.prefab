@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3306293917976607934}
   - component: {fileID: 1895324229575422747}
   - component: {fileID: 4443218922587047889}
+  - component: {fileID: 43361229}
   m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
@@ -87,6 +88,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &43361229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2785899001067070980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &7125430789633456783
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +117,8 @@ GameObject:
   - component: {fileID: 7125430789633456782}
   - component: {fileID: 2675252101562967223}
   - component: {fileID: 1595344960}
+  - component: {fileID: 1595344962}
+  - component: {fileID: 1595344961}
   m_Layer: 7
   m_Name: Extincteur
   m_TagString: Untagged
@@ -306,6 +325,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   extinguishForce: 0.2
   hose: {fileID: 8937344470271848617}
+--- !u!114 &1595344962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7125430789633456783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 1595344961}
+  - {fileID: 43361229}
+  - {fileID: 512014808}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1595344961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7125430789633456783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1001 &192861963669903523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446,6 +506,28 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 192861963669903523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9134116031445295937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8966606169875807202, guid: d46de585262696e478f130bdf5e4be49,
+    type: 3}
+  m_PrefabInstance: {fileID: 192861963669903523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &512014808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134116031445295937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!4 &9139890126143330445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8969559999032655918, guid: d46de585262696e478f130bdf5e4be49,
