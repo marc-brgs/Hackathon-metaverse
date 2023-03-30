@@ -9,8 +9,9 @@ public class Fire : MonoBehaviour
     private float [] startIntensities = new float[0];
     
     [SerializeField] private ParticleSystem [] particleSystems = new ParticleSystem[0];
-
+    
     private bool isLit = true;
+    [SerializeField] private ParticleSystem postSmoke;
     
     private void Start()
     {
@@ -61,6 +62,7 @@ public class Fire : MonoBehaviour
         if (currentIntensity <= 0f)
         {
             isLit = false;
+            postSmoke.gameObject.SetActive(true);
         }
         
         return !isLit; // succeed
