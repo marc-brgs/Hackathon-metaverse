@@ -318,8 +318,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171013582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.68, y: 1.5, z: 11.59}
-  m_LocalScale: {x: 10, y: 3, z: 5}
+  m_LocalPosition: {x: 27.68, y: 0.42, z: 11.59}
+  m_LocalScale: {x: 10, y: 0.73962, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2026,6 +2026,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1595344961}
+  - {fileID: 43361229}
   sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -10628,6 +10629,11 @@ PrefabInstance:
     - target: {fileID: 1385715897, guid: c11273a5762d82c42a418c82841ae5b2, type: 3}
       propertyPath: sceneViewId
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900381433610353053, guid: c11273a5762d82c42a418c82841ae5b2,
+        type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8432708167837764577, guid: c11273a5762d82c42a418c82841ae5b2,
         type: 3}
