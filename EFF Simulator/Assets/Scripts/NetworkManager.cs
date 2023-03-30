@@ -83,8 +83,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
         //instantiate the player prefab on the network 
         Vector3 position = new Vector3(43f, 0f, 15f);
-        PhotonNetwork.Instantiate(playerPrefab.name, position, Quaternion.identity, 0);
-
+        PhotonNetwork.Instantiate(playerPrefab.name, position, Quaternion.Euler(0, 180, 0), 0);
+        
         if (PhotonNetwork.IsMasterClient)
         {
             position = new Vector3(36.603f, 0.53f, -10.184f);
@@ -99,7 +99,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             position = new Vector3(37f, 0.8790878f, 5f);
             PhotonNetwork.Instantiate(extinguisherPrefab.name, position, Quaternion.identity, 0);
         }
+        
+        GameManager.instance.UpdateUI();
     }
+    
     public override void OnDisconnected(DisconnectCause cause)
     {
         Debug.LogWarningFormat("PUN Basics Tutorial/Launcher: OnDisconnected() was called by PUN with reason {0}",

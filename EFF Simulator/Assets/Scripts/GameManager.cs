@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    [PunRPC]
     public void UpdateUI()
     {
         civilians = GameObject.FindGameObjectsWithTag("Civilian");
