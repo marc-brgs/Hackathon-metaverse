@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MonoBehaviour InputActionManager;
     [SerializeField] private CharacterController characterController;
     [SerializeField] private MonoBehaviour playerMovement;
+    [SerializeField] private MonoBehaviour pickUpCivilian;
     [SerializeField] private MonoBehaviour leftXRController;
     [SerializeField] private MonoBehaviour leftXRRayInteractor;
     [SerializeField] private MonoBehaviour rightXRController;

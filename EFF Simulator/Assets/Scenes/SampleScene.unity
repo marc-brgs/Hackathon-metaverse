@@ -181,6 +181,7 @@ MonoBehaviour:
   InputActionManager: {fileID: 6349402092889823013}
   characterController: {fileID: 6349402092889823012}
   playerMovement: {fileID: 6349402092889823011}
+  pickUpCivilian: {fileID: 6731230452370077973}
   leftXRController: {fileID: 99317466}
   leftXRRayInteractor: {fileID: 99317465}
   rightXRController: {fileID: 2009825701}
@@ -238,6 +239,7 @@ GameObject:
   - component: {fileID: 171013585}
   - component: {fileID: 171013584}
   - component: {fileID: 171013583}
+  - component: {fileID: 171013587}
   m_Layer: 0
   m_Name: Safe zone
   m_TagString: Untagged
@@ -323,6 +325,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171013587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171013582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933d556ef2920ff4b9dcdaac8efed7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &248852548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7125430789633456783, guid: 2a51a57777108c448826e0e456a885f7,
@@ -350,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010002477438, guid: 5ca4c580b3888314581688fa46fb142d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 12.74
       objectReference: {fileID: 0}
     - target: {fileID: 4000010002477438, guid: 5ca4c580b3888314581688fa46fb142d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -393,6 +407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ShapeModule.m_Scale.y
       value: 27.362309
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 25.634384
       objectReference: {fileID: 0}
     - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
         type: 3}
@@ -8933,6 +8952,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b955851c7d5fd0b48aa77bc0ba60b6b6, type: 3}
+--- !u!114 &6731230452370077973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5716635098508251978, guid: b955851c7d5fd0b48aa77bc0ba60b6b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6731230452370077972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349402092889823008}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2ddab9ec96a514da93d85bb99be6d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &6745302439631826737
 MeshRenderer:
   m_ObjectHideFlags: 0
