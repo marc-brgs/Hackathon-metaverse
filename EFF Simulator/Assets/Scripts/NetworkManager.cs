@@ -13,6 +13,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #region Private Serializable Fields
        
     public GameObject playerPrefab;
+    public GameObject extinguisherPrefab;
+    public GameObject civilianPrefab;
     
     #endregion
 
@@ -82,6 +84,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         //instantiate the player prefab on the network 
         Vector3 position = new Vector3(43f, 0f, 15f);
         PhotonNetwork.Instantiate(playerPrefab.name, position, Quaternion.identity, 0);
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            position = new Vector3(36.603f, 0.53f, -10.184f);
+            PhotonNetwork.Instantiate(civilianPrefab.name, position, Quaternion.identity, 0);
+
+            position = new Vector3(38.9f, 3.96f, -7.836442f);
+            PhotonNetwork.Instantiate(civilianPrefab.name, position, Quaternion.identity, 0);
+            
+            position = new Vector3(32f, 0.8790878f, 5f);
+            PhotonNetwork.Instantiate(extinguisherPrefab.name, position, Quaternion.identity, 0);
+            
+            position = new Vector3(37f, 0.8790878f, 5f);
+            PhotonNetwork.Instantiate(extinguisherPrefab.name, position, Quaternion.identity, 0);
+        }
     }
     public override void OnDisconnected(DisconnectCause cause)
     {
