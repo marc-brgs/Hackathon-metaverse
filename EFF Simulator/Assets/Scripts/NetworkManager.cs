@@ -85,20 +85,28 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Vector3 position = new Vector3(43f, 0f, 15f);
         PhotonNetwork.Instantiate(playerPrefab.name, position, Quaternion.Euler(0, 180, 0), 0);
         
-        if (PhotonNetwork.IsMasterClient)
-        {
+        
             position = new Vector3(36.603f, 0.53f, -10.184f);
             PhotonNetwork.Instantiate(civilianPrefab.name, position, Quaternion.identity, 0);
 
             position = new Vector3(38.9f, 3.96f, -7.836442f);
             PhotonNetwork.Instantiate(civilianPrefab.name, position, Quaternion.identity, 0);
             
-            position = new Vector3(32f, 0.8790878f, 5f);
+            position = new Vector3(51f, 4f, 8f);
+            PhotonNetwork.Instantiate(civilianPrefab.name, position, Quaternion.identity, 0);
+            
+            position = new Vector3(44f, 7.3f, 2f);
+            PhotonNetwork.Instantiate(civilianPrefab.name, position, Quaternion.identity, 0);
+            
+            position = new Vector3(31f, 7.3f, -1f);
+            PhotonNetwork.Instantiate(civilianPrefab.name, position, Quaternion.identity, 0);
+
+            position = new Vector3(55f, 0.8790878f, 5f);
             PhotonNetwork.Instantiate(extinguisherPrefab.name, position, Quaternion.identity, 0);
             
             position = new Vector3(37f, 0.8790878f, 5f);
             PhotonNetwork.Instantiate(extinguisherPrefab.name, position, Quaternion.identity, 0);
-        }
+            
         
         GameManager.instance.UpdateUI();
     }
