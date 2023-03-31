@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
 
     private Vector3 velocity;
-    
+
     // Update is called once per frame
     void Update()
     {
